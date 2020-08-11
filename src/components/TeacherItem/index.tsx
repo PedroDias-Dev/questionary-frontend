@@ -2,7 +2,7 @@ import React from 'react'
 
 
 import '../TeacherItem/style.css'
-import api from '../../services/api'
+// import api from '../../services/api'
 
 export interface User{
     id: number,

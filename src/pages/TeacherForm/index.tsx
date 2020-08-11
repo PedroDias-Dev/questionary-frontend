@@ -31,8 +31,8 @@ function TeacherForm(){
             }
 
             else{
-            alert('Cadastro realizado!');
-            history.push('/questionary');
+            alert('Resultado registrado! Você será redirecionado para a página inicial.');
+            history.push('/');
             }
 
         }).catch(() => {
@@ -40,10 +40,10 @@ function TeacherForm(){
             
         });
 
-        console.log({
-            name,
-            nota
-        });
+        // console.log({
+        //     name,
+        //     nota
+        // });
 
         
     }

@@ -26,7 +26,7 @@ function Landing(){
             user_id: ''
             
         })
-        console.log('sucesso');
+        // console.log('sucesso');
     }
 
     const [totalConnections, setTotalConnections] = useState(0);

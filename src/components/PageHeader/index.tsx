@@ -15,13 +15,7 @@ interface PageHeaderProps{
     description?: string;
 };
 
-function VerifyQuestionary( verify: boolean ){
-    if (verify === true){
-        alert('Tem certeza que deseja sair do questionário? Você ainda não terminou')
-    }
 
-    
-}
 
 export interface User{
     id: number,

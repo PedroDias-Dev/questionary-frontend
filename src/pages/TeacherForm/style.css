@@ -132,10 +132,30 @@
 
 .question{
     background-color: white;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 .lastFooter{
     align-items: center;
+}
+
+.alternativa{
+    align-items: center;
+    display: flex;
+    margin: 1rem;
+    background-color: var(--color-line-in-white);
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.alternativa p{
+    margin-left: 1rem;
+}
+
+.alternativa input{
+    margin-left: 1rem;
 }
 
 @media(min-width: 700px){
