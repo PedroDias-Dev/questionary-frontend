@@ -40,10 +40,10 @@ function TeacherForm(){
             
         });
 
-        // console.log({
-        //     name,
-        //     nota
-        // });
+        console.log({
+            name,
+            nota
+        });
 
         
     }
@@ -100,7 +100,7 @@ function TeacherForm(){
                                 <div className="alternativas">
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
-                                            value={nota + '1'} 
+                                            value={Number(nota) + Number(1)} 
                                             onChange={(e) => {setNota(e.target.value)}}  />
 
                                         <p>opçao 1</p>
@@ -127,7 +127,7 @@ function TeacherForm(){
                                 <div className="alternativas">
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
-                                            value={nota + 1 } 
+                                            value={Number(nota) + Number(1)} 
                                             onChange={(e) => {setNota(e.target.value)}}  />
 
                                         <p>opçao 1</p>
@@ -154,7 +154,7 @@ function TeacherForm(){
                                 <div className="alternativas">
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
-                                            value={nota + 1} 
+                                            value={Number(nota) + Number(1)} 
                                             onChange={(e) => {setNota(e.target.value)}}  />
 
                                         <p>opçao 1</p>
@@ -181,7 +181,7 @@ function TeacherForm(){
                                 <div className="alternativas">
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
-                                            value={nota + 1} 
+                                            value={Number(nota) + Number(1)} 
                                             onChange={(e) => {setNota(e.target.value)}}  />
 
                                         <p>opçao 1</p>
@@ -208,7 +208,7 @@ function TeacherForm(){
                                 <div className="alternativas">
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
-                                            value={nota + 1} 
+                                            value={Number(nota) + Number(1)} 
                                             onChange={(e) => {setNota(e.target.value)}}  />
 
                                         <p>opçao 1</p>
@@ -226,7 +226,147 @@ function TeacherForm(){
                                         <p>opçao 1</p>
                                     </div>
                                 </div>
-                        </div>             
+                        </div>        
+
+                        <div className="question">
+                                <strong>Pergunta 1 -</strong>
+                                <h3>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                </h3>
+                                <div className="alternativas">
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" 
+                                            value={Number(nota) + Number(1)} 
+                                            onChange={(e) => {setNota(e.target.value)}}  />
+
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                </div>
+                        </div> 
+
+                        <div className="question">
+                                <strong>Pergunta 1 -</strong>
+                                <h3>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                </h3>
+                                <div className="alternativas">
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" 
+                                            value={Number(nota) + Number(1)} 
+                                            onChange={(e) => {setNota(e.target.value)}}  />
+
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                </div>
+                        </div> 
+
+                        <div className="question">
+                                <strong>Pergunta 1 -</strong>
+                                <h3>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                </h3>
+                                <div className="alternativas">
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" 
+                                            value={Number(nota) + Number(1)} 
+                                            onChange={(e) => {setNota(e.target.value)}}  />
+
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                </div>
+                        </div> 
+
+                        <div className="question">
+                                <strong>Pergunta 1 -</strong>
+                                <h3>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                </h3>
+                                <div className="alternativas">
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" 
+                                            value={Number(nota) + Number(1)} 
+                                            onChange={(e) => {setNota(e.target.value)}}  />
+
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                </div>
+                        </div> 
+
+                        <div className="question">
+                                <strong>Pergunta 1 -</strong>
+                                <h3>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                </h3>
+                                <div className="alternativas">
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" 
+                                            value={Number(nota) + Number(1)} 
+                                            onChange={(e) => {setNota(e.target.value)}}  />
+
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>opçao 1</p>
+                                    </div>
+                                </div>
+                        </div>      
                     </div>             
                
 
