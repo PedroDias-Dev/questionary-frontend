@@ -71,8 +71,12 @@ function Landing(){
                     Total de {totalConnections} conexões já realizadas
                     <img src={purpleHeartIcon} alt="Coração roxo"/>
                 </span>
-            </div>
+                <span className="directs">
+                    <p>Todas as imagens e ícones foram fornecidos por Rocketseat.</p>
+                    <p>Escola SENAI de Informática - 2020</p>
 
+                </span>
+            </div>
         </div>
     )
 }

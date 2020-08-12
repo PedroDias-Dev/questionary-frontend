@@ -13,6 +13,7 @@ interface PageHeaderProps{
     title: string;
     //? - nao obrigatorio
     description?: string;
+    description2?: string;
 };
 
 
@@ -36,24 +37,6 @@ interface TeacherItemProps{
     teacher: Teacher
 }
 
-/* const verifyAlert = ((verify: boolean) => {
-    if (verify === true){
-        Alert.alert(
-        "Alert Title",
-        "My Alert Msg",
-        [
-            {
-            text: "Cancel",
-            onPress: () => console.log("Cancel Pressed"),
-            style: "cancel"
-            },
-            { text: "OK", onPress: () => console.log("OK Pressed") }
-        ],
-        { cancelable: false }
-        );
-}
-});
-*/
 
 
 const PageHeader: React.FC<PageHeaderProps> =  (props) => {
@@ -73,6 +56,7 @@ const PageHeader: React.FC<PageHeaderProps> =  (props) => {
                 <div className="header-content">
                     <strong>{props.title}</strong>
                     {props.description && <p>{props.description}</p>}
+                    {props.description2 && <p>{props.description2}</p>}
 
                     {props.children}
                 </div>

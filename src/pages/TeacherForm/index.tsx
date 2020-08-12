@@ -30,6 +30,11 @@ function TeacherForm(){
                 history.push('/')
             }
 
+            else if (Number(nota) >= 10){
+                alert('Erro ao registrar. Não selecione mais de uma opção por questão! Tente novamente.');
+                history.push('/')
+            }
+
             else{
             alert('Resultado registrado! Você será redirecionado para a página inicial.');
             history.push('/');
@@ -53,7 +58,8 @@ function TeacherForm(){
         <div id="page-teacher-form" className="container">
             <PageHeader 
                 title="OK, vamos lá!" 
-                description="O primeiro passo é preencher este formulário"
+                description="O primeiro passo é preencher este formulário."
+                description2="Preencha atentamente, assim poderá ver seu resultado após o questionário."
             />
 
             <main>
@@ -83,7 +89,7 @@ function TeacherForm(){
                         <p>
                             <img src={ warningIcon } alt="Aviso Importante"/>
                             Importante <br />
-                            Preencha atentamente, assim poderá ver seu resultado após o questionário.
+                            Não selecione mais de uma opção por questão, ou seu resultado não será registrado! 
                         </p>
                         {/* <button type="submit"> Salvar os dados</button> */}
                     </footer>
@@ -95,88 +101,89 @@ function TeacherForm(){
                         <div className="question">
                                 <strong>Pergunta 1 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                Para que serve a função SUM ?
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                            
+
+                                        <p>Para mostrar todos os itens da coluna.</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>Para sumir com a coluna. </p>
+                                    </div>
+                                    <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
                                             value={Number(nota) + Number(1)} 
-                                            onChange={(e) => {setNota(e.target.value)}}  />
-
-                                        <p>opçao 1</p>
+                                            onChange={(e) => {setNota(e.target.value)}}  
+                                            />
+                                        <p>Para realizar a soma dos valores da coluna.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Para subtrair os valores da coluna.</p>
                                     </div>
                                 </div>
                         </div>             
                         <div className="question">
-                                <strong>Pergunta 1 -</strong>
+                                <strong>Pergunta 2 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                Quando utilizamos a função MAX ?
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+
+                                        <p>Quando queremos mostrar todos os itens da coluna.</p>
+                                    </div>
+                                    <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
                                             value={Number(nota) + Number(1)} 
-                                            onChange={(e) => {setNota(e.target.value)}}  />
-
-                                        <p>opçao 1</p>
+                                            onChange={(e) => {setNota(e.target.value)}}/>
+                                        <p>Quando queremos mostrar o maior valor da coluna.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Quando queremos somar todos os valores e mostrar o resultado.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Quando queremos somar todos os valores ignorando o NULL.</p>
                                     </div>
                                 </div>
                         </div>             
                         <div className="question">
-                                <strong>Pergunta 1 -</strong>
+                                <strong>Pergunta 3 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                Com que outra função podemos utilizar o HAVING ?
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>MAX.</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>ALIAS.</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>AVG.</p>
+                                    </div>
+                                    <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
                                             value={Number(nota) + Number(1)} 
-                                            onChange={(e) => {setNota(e.target.value)}}  />
-
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                            onChange={(e) => {setNota(e.target.value)}}/>
+                                        <p>GROUP BY.</p>
                                     </div>
                                 </div>
                         </div>             
                         <div className="question">
-                                <strong>Pergunta 1 -</strong>
+                                <strong>Pergunta 4 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                Podemos criar um apelido para a coluna através da palvra-chave:
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
@@ -184,54 +191,54 @@ function TeacherForm(){
                                             value={Number(nota) + Number(1)} 
                                             onChange={(e) => {setNota(e.target.value)}}  />
 
-                                        <p>opçao 1</p>
+                                        <p>AS.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>BY</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>COMO</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>LIKE</p>
                                     </div>
                                 </div>
                         </div>             
                         <div className="question">
-                                <strong>Pergunta 1 -</strong>
+                                <strong>Pergunta 5 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                A função COUNT retorna:
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+
+                                        <p>O número de linhas total (incluindo linhas com valor NULL).</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>O número de tabelas criadas.  </p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>O número de caracteres total.</p>
+                                    </div>
+                                    <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
                                             value={Number(nota) + Number(1)} 
-                                            onChange={(e) => {setNota(e.target.value)}}  />
-
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                            onChange={(e) => {setNota(e.target.value)}}/>
+                                        <p>Nenhuma das alternativas.</p>
                                     </div>
                                 </div>
                         </div>        
 
                         <div className="question">
-                                <strong>Pergunta 1 -</strong>
+                                <strong>Pergunta 6 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                A função MIN retorna:
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
@@ -239,111 +246,111 @@ function TeacherForm(){
                                             value={Number(nota) + Number(1)} 
                                             onChange={(e) => {setNota(e.target.value)}}  />
 
-                                        <p>opçao 1</p>
+                                        <p>O menor valor da coluna.    </p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>O resultado da subtração de todos os valores da coluna.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Quanto queremos mostrar todos os itens e ignorar valroes NULL.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>O resultado da subtração todos os valores ignorando valores NULL.</p>
                                     </div>
                                 </div>
                         </div> 
 
                         <div className="question">
-                                <strong>Pergunta 1 -</strong>
+                                <strong>Pergunta 7 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                Com qual principal conceito da orientação esta relacionada as funções escalares?
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+
+                                        <p>Abstração.</p>
+                                    </div>
+                                    <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
                                             value={Number(nota) + Number(1)} 
-                                            onChange={(e) => {setNota(e.target.value)}}  />
-
-                                        <p>opçao 1</p>
+                                            onChange={(e) => {setNota(e.target.value)}}/>
+                                        <p>Encapsulamento.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Herança.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Polimorfismo.</p>
                                     </div>
                                 </div>
                         </div> 
 
                         <div className="question">
-                                <strong>Pergunta 1 -</strong>
+                                <strong>Pergunta 8 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                Na sintaxe 'NTILE(x)'. O 'x' se refere à:
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+
+                                        <p>Quantidade de linhas a ser dividida.</p>
+                                    </div>
+                                    <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
                                             value={Number(nota) + Number(1)} 
-                                            onChange={(e) => {setNota(e.target.value)}}  />
-
-                                        <p>opçao 1</p>
+                                            onChange={(e) => {setNota(e.target.value)}}/>
+                                        <p>Quantidade de grupos a ser dividido.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Qual sera o nome do resultado da divisão.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Qual grupo vai ser dividido.</p>
                                     </div>
                                 </div>
                         </div> 
 
                         <div className="question">
-                                <strong>Pergunta 1 -</strong>
+                                <strong>Pergunta 9 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                Através do exemplo dado em aula o DENSE_RANK teve seu resultado atribuido a qual entidade?
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+
+                                        <p>Name.</p>
+                                    </div>
+                                    <div className="alternativa">
+                                        <input type="checkbox" name="myCheckbox" value="0"/>
+                                        <p>ProductID.</p>
+                                    </div>
+                                    <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" 
                                             value={Number(nota) + Number(1)} 
-                                            onChange={(e) => {setNota(e.target.value)}}  />
-
-                                        <p>opçao 1</p>
+                                            onChange={(e) => {setNota(e.target.value)}}/>
+                                        <p>Quantity.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
-                                    </div>
-                                    <div className="alternativa">
-                                        <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>LocationID.</p>
                                     </div>
                                 </div>
                         </div> 
 
                         <div className="question">
-                                <strong>Pergunta 1 -</strong>
+                                <strong>Pergunta 10 -</strong>
                                 <h3>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim veniam molestiae sit rerum repellendus. Placeat tempore modi fugiat mollitia tempora explicabo facilis aliquid, eos aperiam aspernatur ab nesciunt voluptatibus!
+                                A função COLLATE serve para:
                                 </h3>
                                 <div className="alternativas">
                                     <div className="alternativa">
@@ -351,19 +358,19 @@ function TeacherForm(){
                                             value={Number(nota) + Number(1)} 
                                             onChange={(e) => {setNota(e.target.value)}}  />
 
-                                        <p>opçao 1</p>
+                                        <p>Escolher um agrupamento para ser modificado.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Escolher uma linha a ser modificada. </p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Escolher uma tabela para ser modificada.</p>
                                     </div>
                                     <div className="alternativa">
                                         <input type="checkbox" name="myCheckbox" value="0"/>
-                                        <p>opçao 1</p>
+                                        <p>Nenhuma das opções.</p>
                                     </div>
                                 </div>
                         </div>      
